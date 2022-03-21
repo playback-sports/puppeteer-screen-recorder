@@ -98,7 +98,7 @@ export default class PageVideoStreamWriter extends EventEmitter {
   private isWritableStream(destinationSource: string | Writable): boolean {
     if (destinationSource && typeof destinationSource !== 'string') {
       if (
-        !(destinationSource instanceof Writable) ||
+        // !(destinationSource instanceof Writable) ||
         !('writable' in destinationSource) ||
         !destinationSource.writable
       ) {
